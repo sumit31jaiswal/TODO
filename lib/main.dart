@@ -23,7 +23,6 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   List todos = List();
   String input = '';
-  bool _isSelected = false;
   var valuefirst="";
 
   @override
@@ -48,6 +47,7 @@ class _HomeState extends State<Home> {
                   actions: <Widget>[
                     FlatButton(
                         onPressed: () {
+                          Navigator.of(context).pop();
                           setState(() {
                             todos.add(input);
                           });
